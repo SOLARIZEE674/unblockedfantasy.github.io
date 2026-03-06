@@ -2,316 +2,319 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phantom Unblocked</title>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/search.css">
-    <link rel="stylesheet" href="components/topbar.css">
-    <link rel="stylesheet" href="styles/background.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        html,
-        body {
-            height: 100%;
-        }
+<title>Unblocked Fantasy</title>
 
-        .home-page {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 
-        .main-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 80px 24px 40px;
-            text-align: center;
-        }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        .site-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-            letter-spacing: -0.02em;
-            background: linear-gradient(90deg, #e4e4e7 0%, #a1a1aa 40%, #52525b 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+<link rel="stylesheet" href="styles/main.css">
+<link rel="stylesheet" href="styles/search.css">
+<link rel="stylesheet" href="components/topbar.css">
+<link rel="stylesheet" href="styles/background.css">
 
-        .site-subtitle {
-            font-size: 1rem;
-            color: var(--text-muted);
-            margin-bottom: 32px;
-            min-height: 24px;
-        }
+<style>
 
-        /* Search Bar */
-        .search-container {
-            width: 100%;
-            max-width: 500px;
-            margin-bottom: 48px;
-        }
+html,body{
+height:100%;
+}
 
-        .search-bar {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 14px 20px;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 9999px;
-            transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
-        }
+.home-page{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+}
 
-        .search-bar:hover {
-            background: var(--surface-hover);
-        }
+.main-content{
+flex:1;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+padding:80px 24px 40px;
+text-align:center;
+}
 
-        .search-bar:focus-within {
-            border-color: var(--text-muted);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
+.site-title{
+font-size:2.5rem;
+font-weight:700;
+margin-bottom:8px;
+letter-spacing:-0.02em;
+background:linear-gradient(90deg,#e4e4e7 0%,#a1a1aa 40%,#52525b 100%);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
 
-        .search-bar i {
-            color: var(--text-muted);
-            font-size: 1rem;
-        }
+.site-subtitle{
+font-size:1rem;
+color:var(--text-muted);
+margin-bottom:32px;
+min-height:24px;
+}
 
-        .search-bar input {
-            flex: 1;
-            background: transparent;
-            border: none;
-            outline: none;
-            color: var(--text);
-            font-size: 1rem;
-        }
+/* Search */
 
-        .search-bar input::placeholder {
-            color: var(--text-muted);
-        }
+.search-container{
+width:100%;
+max-width:500px;
+margin-bottom:48px;
+}
 
-        /* Featured Section */
-        .featured-section {
-            width: 100%;
-            max-width: 800px;
-        }
+.search-bar{
+display:flex;
+align-items:center;
+gap:12px;
+padding:14px 20px;
+background:var(--surface);
+border:1px solid var(--border);
+border-radius:9999px;
+}
 
-        .section-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            margin-bottom: 16px;
-        }
+.search-bar:hover{
+background:var(--surface-hover);
+}
 
-        .section-title {
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
+.search-bar:focus-within{
+border-color:var(--text-muted);
+box-shadow:0 4px 20px rgba(0,0,0,0.3);
+}
 
-        .star-icon {
-            color: #fbbf24;
-            font-size: 0.875rem;
-        }
+.search-bar i{
+color:var(--text-muted);
+}
 
-        .featured-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-            gap: 12px;
-        }
+.search-bar input{
+flex:1;
+background:transparent;
+border:none;
+outline:none;
+color:var(--text);
+font-size:1rem;
+}
 
-        .featured-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 14px 10px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.15s;
-            text-decoration: none;
-            color: var(--text);
-        }
+.search-bar input::placeholder{
+color:var(--text-muted);
+}
 
-        .featured-card:hover {
-            background: var(--surface-hover);
-            border-color: var(--border-light);
-            transform: translateY(-2px);
-        }
+/* Featured */
 
-        .featured-card-icon {
-            width: 40px;
-            height: 40px;
-            margin: 0 auto 8px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.125rem;
-            overflow: hidden;
-        }
+.featured-section{
+width:100%;
+max-width:800px;
+}
 
-        .featured-card-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 8px;
-        }
+.section-header{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+margin-bottom:16px;
+}
 
-        .featured-card-title {
-            font-size: 0.75rem;
-            font-weight: 600;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
+.section-title{
+font-size:0.75rem;
+font-weight:600;
+color:var(--text-muted);
+text-transform:uppercase;
+letter-spacing:0.05em;
+}
 
+.star-icon{
+color:#fbbf24;
+}
 
+.featured-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(120px,1fr));
+gap:12px;
+}
 
+.featured-card{
+background:var(--surface);
+border:1px solid var(--border);
+border-radius:10px;
+padding:14px 10px;
+text-align:center;
+cursor:pointer;
+transition:all .15s;
+text-decoration:none;
+color:var(--text);
+}
 
+.featured-card:hover{
+background:var(--surface-hover);
+transform:translateY(-2px);
+}
 
-        .offline-banner {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            padding: var(--space-sm) var(--space-md);
-            background: var(--warning);
-            color: var(--bg);
-            text-align: center;
-            font-size: 0.875rem;
-            font-weight: 500;
-            z-index: var(--z-toast);
-            transform: translateY(-100%);
-            transition: transform var(--transition-normal);
-        }
+.featured-card-icon{
+width:40px;
+height:40px;
+margin:0 auto 8px;
+border-radius:8px;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+}
 
-        .offline-banner.show {
-            transform: translateY(0);
-        }
+.featured-card-icon img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
 
-        @media (max-width: 640px) {
-            .site-title {
-                font-size: 1.75rem;
-            }
+.featured-card-title{
+font-size:0.75rem;
+font-weight:600;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+}
 
-            .featured-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 8px;
-            }
+/* Offline banner */
 
+.offline-banner{
+position:fixed;
+top:0;
+left:0;
+right:0;
+padding:8px;
+background:var(--warning);
+color:var(--bg);
+text-align:center;
+font-size:0.875rem;
+font-weight:500;
+transform:translateY(-100%);
+transition:transform .3s;
+}
 
-        }
-    </style>
-    <script src="config.js" defer></script>
-    <script src="scripts/settings.js" defer></script>
-    <script src="scripts/background.js" defer></script>
-    <script src="scripts/cloaking.js" defer></script>
-    <script src="scripts/quotes.js" defer></script>
-    <script src="scripts/notifications.js" defer></script>
-    <script src="scripts/rotation.js" defer></script>
-    <script src="scripts/featured.js" defer></script>
-    <script src="components/UGSfiles.js" defer></script>
-    <script src="scripts/gloader.js" defer></script>
-    <script src="scripts/search.js" defer></script>
-    <script src="https://raw.githubusercontent.com/Destroyed12121/Staticsj/main/JS/scramjet.all.js" defer></script>
-    <script type="module">
-        import * as BareMux from "https://cdn.jsdelivr.net/npm/@mercuryworkshop/bare-mux/dist/index.mjs";
-        window.BareMux = BareMux;
-    </script>
+.offline-banner.show{
+transform:translateY(0);
+}
+
+</style>
+
+<script src="config.js" defer></script>
+<script src="scripts/settings.js" defer></script>
+<script src="scripts/background.js" defer></script>
+<script src="scripts/cloaking.js" defer></script>
+<script src="scripts/quotes.js" defer></script>
+<script src="scripts/notifications.js" defer></script>
+<script src="scripts/rotation.js" defer></script>
+<script src="scripts/featured.js" defer></script>
+<script src="components/UGSfiles.js" defer></script>
+<script src="scripts/gloader.js" defer></script>
+<script src="scripts/search.js" defer></script>
+
+<script src="https://raw.githubusercontent.com/Destroyed12121/Staticsj/main/JS/scramjet.all.js" defer></script>
+
+<script type="module">
+import * as BareMux from "https://cdn.jsdelivr.net/npm/@mercuryworkshop/bare-mux/dist/index.mjs";
+window.BareMux = BareMux;
+</script>
+
 </head>
 
 <body>
-    <div class="offline-banner" id="offline-banner">
-        <i class="fa-solid fa-wifi-slash"></i>
-        <span>You're offline</span>
-    </div>
 
-    <div class="home-page">
-        <script src="components/topbar.js"></script>
+<div class="offline-banner" id="offline-banner">
+<i class="fa-solid fa-wifi-slash"></i>
+<span>You're offline</span>
+</div>
 
-        <main class="main-content">
-            <h1 class="site-title">Phantom Unblocked</h1>
-            <p class="site-subtitle" id="subtitle"></p>
+<div class="home-page">
 
-            <!-- Search Bar -->
-            <div class="search-container">
-                <form class="search-bar" onsubmit="handleSearch(event)">
-                    <i class="fa-solid fa-search"></i>
-                    <input type="text" id="search-input" placeholder="Search the web and games..." autocomplete="off">
-                </form>
-            </div>
+<script src="components/topbar.js"></script>
 
-            <!-- Featured -->
-            <section class="featured-section">
-                <div class="section-header">
-                    <i class="fa-solid fa-star star-icon"></i>
-                    <span class="section-title">Featured</span>
-                </div>
-                <div class="featured-grid" id="featured-grid"></div>
-            </section>
+<main class="main-content">
 
-            <!-- Online Counter -->
-            <div class="online-counter"
-                style="margin-top: 24px; display: inline-flex; align-items: center; gap: 6px; font-size: 0.875rem; color: var(--text-muted);">
-                <i class="fa-solid fa-user-group" style="color: #22c55e;"></i>
-                <span id="page-online-count">--</span>
-                <span>online</span>
-            </div>
-        </main>
+<h1 class="site-title">Unblocked Fantasy</h1>
 
-    </div>
+<p class="site-subtitle" id="subtitle"></p>
 
+<div class="search-container">
+<form class="search-bar" onsubmit="handleSearch(event)">
+<i class="fa-solid fa-search"></i>
+<input type="text" id="search-input" placeholder="Search the web and games..." autocomplete="off">
+</form>
+</div>
 
-    <script>
-        // Featured 
-        window.addEventListener('DOMContentLoaded', async () => {
-            if (!window.FeaturedGames) return;
-            await window.FeaturedGames.load();
-            const featuredGames = window.FeaturedGames.games || [];
+<section class="featured-section">
 
-            const grid = document.getElementById('featured-grid');
-            if (!grid) return;
+<div class="section-header">
+<i class="fa-solid fa-star star-icon"></i>
+<span class="section-title">Featured</span>
+</div>
 
-            const fragment = document.createDocumentFragment();
-            featuredGames.forEach(g => {
-                const card = document.createElement('a');
-                card.href = g.url;
-                card.className = 'featured-card';
-                card.innerHTML = `
-                    <div class="featured-card-icon" style="background: ${g.gameName ? 'transparent' : 'var(--surface-hover)'}; color: var(--text-muted);">
-                        ${g.img ? `<img src="${g.img}" loading="eager" onerror="this.parentElement.innerHTML='<i class=\\'fa-solid fa-gamepad\\'></i>'">` : `<i class="${g.icon}"></i>`}
-                    </div>
-                    <div class="featured-card-title">${g.name}</div>
-                `;
-                fragment.appendChild(card);
-            });
-            grid.appendChild(fragment);
-        });
+<div class="featured-grid" id="featured-grid"></div>
 
+</section>
 
+<div class="online-counter" style="margin-top:24px;display:inline-flex;align-items:center;gap:6px;font-size:.875rem;color:var(--text-muted);">
 
-        // Theme notification
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                if (window.Notify) {
-                    window.Notify.info("Appearance", "Don't like your theme? Change it in settings!", 6000);
-                }
-            }, 1500);
-        });
-    </script>
+<i class="fa-solid fa-user-group" style="color:#22c55e;"></i>
 
-    <script src="components/footer.js" defer></script>
-    <script src="scripts/init.js" defer></script>
+<span id="page-online-count">--</span>
+
+<span>online</span>
+
+</div>
+
+</main>
+
+</div>
+
+<script>
+
+window.addEventListener('DOMContentLoaded', async () => {
+
+if(!window.FeaturedGames) return;
+
+await window.FeaturedGames.load();
+
+const featuredGames = window.FeaturedGames.games || [];
+
+const grid = document.getElementById('featured-grid');
+
+if(!grid) return;
+
+const fragment=document.createDocumentFragment();
+
+featuredGames.forEach(g=>{
+
+const card=document.createElement('a');
+
+card.href=g.url;
+
+card.className='featured-card';
+
+card.innerHTML=`
+
+<div class="featured-card-icon" style="background:${g.gameName ? 'transparent' : 'var(--surface-hover)'};">
+
+${g.img ? `<img src="${g.img}" loading="eager">` : `<i class="${g.icon}"></i>`}
+
+</div>
+
+<div class="featured-card-title">${g.name}</div>
+
+`;
+
+fragment.appendChild(card);
+
+});
+
+grid.appendChild(fragment);
+
+});
+
+</script>
+
+<script src="components/footer.js" defer></script>
+<script src="scripts/init.js" defer></script>
+
 </body>
-
 </html>

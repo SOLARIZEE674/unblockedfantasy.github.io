@@ -1,6 +1,6 @@
 window.SITE_CONFIG = {
-    name: "Phantom",
-    fullName: "Phantom Unblocked",
+    name: "Unblocked Fantasy", 
+    fullName: "Unblocked Fantas",
     version: "1.1.4",
 
     changelog: [
